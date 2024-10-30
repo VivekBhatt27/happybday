@@ -1,0 +1,207 @@
+body {
+    background-color: #ffe4e1;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.carousel-inner {
+    width: 400px; /* Set the width of the carousel */
+    height: 600px; /* Set the height of the carousel */
+    overflow: hidden; /* Hide any overflow content */
+}
+
+header {
+    padding: 20px;
+    background-color: lavender;
+    color: black;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.photo-container {
+    margin-right: 20px;
+}
+
+.photo-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+}
+
+.text-container {
+    max-width: 600px;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.carousel-inner .carousel-img {
+    width: 400px; /* Set fixed width for images */
+    height: 600px; /* Set fixed height for images */
+    object-fit: cover; /* Ensure images cover their container */
+}
+
+.carousel-caption-text {
+    margin: 15px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.carousel-indicators [data-bs-target] {
+    border: none;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #333;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 200px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 187px;
+    border-bottom: 2px solid lavender;
+    border-radius: 10px 10px 0 0;
+}
+
+.card h2 {
+    color: black;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.audio-player {
+    margin: 20px auto;
+    background: lavender;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.audio-player .controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.audio-player button {
+    background: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.audio-player button:hover {
+    background: lavender;
+}
+
+.audio-player #current-time, .audio-player #duration {
+    color: white;
+    margin: 0 10px;
+}
+
+#content-frame {
+    width: 100%;
+    height: 500px;
+    margin-top: 20px;
+    display: none;
+}
+
+footer {
+    background-color: lavender;
+    color: black;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.carousel-inner .carousel-item {
+    width: 100%; /* Ensure each item takes full width of the carousel */
+    height: 100%; /* Ensure each item takes full height of the carousel */
+    display: none; /* Initially hide all items */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+.carousel-inner .carousel-item.active {
+    display: flex; /* Display only active item */
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+    .carousel-inner .carousel-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-container {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        max-width: 300px;
+    }
+
+    .audio-player {
+        width: 100%;
+    }
+}
